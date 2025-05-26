@@ -88,7 +88,11 @@ export default function Navbar(): JSX.Element {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
-      if (isOpen && !target.closest(".mobile-menu") && !target.closest(".menu-button")) {
+      if (
+        isOpen &&
+        !target.closest(".mobile-menu") &&
+        !target.closest(".menu-button")
+      ) {
         closeMenu();
       }
     };
@@ -174,7 +178,11 @@ export default function Navbar(): JSX.Element {
             className="md:hidden text-foreground focus:outline-none p-2 menu-button"
             aria-label="Toggle menu"
           >
-            {isOpen ? <IconX className="w-6 h-6" /> : <IconMenu2 className="w-6 h-6" />}
+            {isOpen ? (
+              <IconX className="w-6 h-6" />
+            ) : (
+              <IconMenu2 className="w-6 h-6" />
+            )}
           </button>
         </div>
       </div>
