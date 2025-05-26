@@ -96,7 +96,7 @@ export function ModeToggle() {
       <DropdownMenuTrigger asChild>
         <Button
           id="theme-toggle"
-          variant="outline"
+          variant="ghost"
           size="icon"
           className="border-none bg-transparent"
         >
